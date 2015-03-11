@@ -7,7 +7,7 @@
 	// registers the ENTER keypress as a part of that string)
 	$choice1 = trim(fgets(STDIN));
 
-	if(!is_numeric($choice1)){
+	while(!is_numeric($choice1)){
 		echo "Integers only please.\n";
 		$choice1 = trim(fgets(STDIN));
 	}
@@ -18,8 +18,8 @@
 	// Capture user input
 	$choice2 = trim(fgets(STDIN));
 
-	if(!is_numeric($choice2)){
-		echo "Integers only please.\n";
+	while(!is_numeric($choice2) || $choice2 < $choice1){
+		echo "Integers only please. And it must be larger than your starting number.\n";
 		$choice2 = trim(fgets(STDIN));
 	}
 
@@ -30,12 +30,12 @@
 	// $choice3 = 1;	//if the user does not choose
 	$choice3 = trim(fgets(STDIN));
 
-	if(!is_numeric($choice3)){
-		echo "Integers only please.\n";
+	while(!is_numeric($choice3) || $choice3 <= 0){
+		echo "Positive integers only please.\n";
 		$choice3 = trim(fgets(STDIN));
 	}
 
-
+	// Execute their choices
 	echo "Here are all the numbers from $choice1 to $choice2, incrementing by $choice3:\n";
 
 	for ($i = $choice1; $i <= $choice2; $i += $choice3){

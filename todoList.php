@@ -56,7 +56,7 @@ do {
         if($where == 'B'){
             array_unshift($items, "$newItem");
         } elseif ($where == 'E'){
-            array_push($items, "$newItem");
+            array_push($items, "$newItem");     // does the same thing as the last 'else', just different syntax
         } else {
             $items[] = $newItem;
         }

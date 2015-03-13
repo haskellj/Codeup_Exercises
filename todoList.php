@@ -36,7 +36,7 @@ do {
     }
 
     // Show the menu options
-    echo '(N)ew item, (R)emove item, (S)ort list, (Q)uit : ';
+    echo '(N)ew item, (R)emove specific item, (S)ort list, (Q)uit: ';
 
     // Get the input from user
     // Use trim() to remove whitespace and newlines
@@ -49,7 +49,18 @@ do {
         // Ask for entry
         echo 'Enter item: ';
         // Add entry to list array
-        $items[] = trim(fgets(STDIN));
+        $newItem = trim(fgets(STDIN));
+        // Give them an option to add it to the front or end of array
+        echo "(B)eginning or (E)nd of the list? ";
+        $where = strtoupper(trim(fgets(STDIN)));
+        if($where == 'B'){
+            array_unshift($items, "$newItem");
+        } elseif ($where == 'E'){
+            array_push($items, "$newItem");
+        } else {
+            $items[] = $newItem;
+        }
+
     } elseif ($input == 'R') {
         // Remove which item?
         echo 'Enter item number to remove: ';
@@ -60,6 +71,10 @@ do {
         unset($items[$key]);
     } elseif ($input == 'S'){
         $items = sort_menu($items);
+    } elseif ($input == 'F'){
+        array_shift($items);
+    } elseif ($input == 'L'){
+        array_pop($items);
     }
 // Exit when input is (Q)uit
 } while ($input != 'Q');

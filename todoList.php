@@ -2,14 +2,15 @@
 
 // Create array to hold list of todo items
 $items = array();
-
-//Implement sorting options
+    
+    //Implement sorting options when called by loop
     function sort_menu($bull)
     {
         //Show menu options
         echo "(A)-Z, (Z)-A, (O)riginal order, (R)everse original order: ";
-        //Get user input
+        //Get user input, using trim() to remove special characters, and strtoupper() to uppercase user input
         $type = trim(fgets(STDIN));
+        $type = strtoupper($type);
 
         //Take action base on input
         if($type == 'A'){
@@ -25,7 +26,7 @@ $items = array();
             krsort($bull);
             return $bull;
         } else {
-            return;
+            return $bull;
         }
     }
 
@@ -33,7 +34,8 @@ $items = array();
 do {
     // Iterate through list items
     foreach ($items as $key => $item) {
-        // Display each item and a newline
+        // Display each item and a newline, starting with 1 instead of zero
+        $key++;
         echo "[{$key}] {$item}\n";
     }
 
@@ -43,6 +45,8 @@ do {
     // Get the input from user
     // Use trim() to remove whitespace and newlines
     $input = trim(fgets(STDIN));
+    // Use strtoupper() to make all input upper case
+    $input = strtoupper($input);
 
     // Check for actionable input
     if ($input == 'N') {
@@ -53,8 +57,9 @@ do {
     } elseif ($input == 'R') {
         // Remove which item?
         echo 'Enter item number to remove: ';
-        // Get array key
+        // Get array key, subtract one because the zero key was skipped (see $key++ in foreach loop)
         $key = trim(fgets(STDIN));
+        $key--;
         // Remove from array
         unset($items[$key]);
     } elseif ($input == 'S'){

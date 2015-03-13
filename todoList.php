@@ -12,22 +12,18 @@ $items = array();
         $type = trim(fgets(STDIN));
         $type = strtoupper($type);
 
-        //Take action base on input
+        //Take action based on input
         if($type == 'A'){
             asort($bull);
-            return $bull;
         } elseif($type == 'Z'){
             arsort($bull);
-            return $bull;
         } elseif($type == 'O'){
             ksort($bull);
-            return $bull;
         } elseif($type == 'R'){
             krsort($bull);
-            return $bull;
-        } else {
-            return $bull;
         }
+        
+        return $bull;
     }
 
 // The loop!

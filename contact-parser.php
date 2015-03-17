@@ -5,9 +5,10 @@ function parseContacts($filename)
     $contacts = array();
 
     // todo - read file and parse contacts
-    $handler = fopen($filename, 'r');
-    $contents = fread($handler, filesize($filename));
+    $handle = fopen($filename, 'r');
+    $contents = fread($handle, filesize($filename));
     echo $contents;
+    
     // Create an inital array of the contents by exploding based on the end of a line
     $contentsArray = explode("\n", $contents);
     print_r($contentsArray);
@@ -19,26 +20,18 @@ function parseContacts($filename)
     	array_shift($contentsArray);	
     }
     // Change the numeric key values to strings by combining an array of strings with each small array
+    // Reformat phone numbers to include hyphen ###-###-####
     $key = array("name", "number");
-    foreach ($contentsArray as $element) {
-    	$contacts[] = array_combine($key, $element);
+    foreach ($contentsArray as $innerArray) {
+	    $contact = array_combine($key, $innerArray);
+	    $contact["number"] = substr($contact["number"], 0, 3)."-".substr($contact["number"], 3, 3)."-".substr($contact["number"], 6);
+		$contacts[] = $contact;
     }
-    foreach($contacts as $element){
-    	$element["number"] = substr($element["number"], 0, 3)."-".substr($element["number"], 3, 3)."-".substr($element["number"], 6);
-    	var_dump($element);
-    }
-
-    fclose($handler);
+    
+    fclose($handle);
     return $contacts;
 }
 
 var_dump(parseContacts('contacts.txt'));
 
 
-
-// foreach ($element as $key => $value) {
-//     		if($key == 0){
-//     			$newInnerArrays[] = "name" 
-//     		} elseif ($key == 1){
-
-//     		}

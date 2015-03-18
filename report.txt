@@ -11,4 +11,7 @@ Employee Number, First Name, Last Name, Sales Units
 5, Charles, Xavier, 2
 6, Chet, Chedderson, 8
 7, Chaiam, Chaiamson, 12
-8, Gandolf, Grey, 45
+8, Gandolf the, Grey, 45
+9, Sheldon, Cooper, 3
+10, Bruce Cornelius, Wayne, 13274
+11, Gunter Horatio Magnanimus, Gunderson, 1

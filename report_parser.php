@@ -13,10 +13,10 @@
 // Create a function that parses txt file into an array by exploding each line into an array element
 	$contentsArray = explode("\n", $contents);
 // Delete the line dividers
-	$equalsLineDivder = "===================================================";
+	$equalsLineDivider = "===================================================";
 	$asteriskLineDivider = "***************************************************";
 	$oldHeader = "Employee Number, First Name, Last Name, Sales Units";
-	$dividers = array($equalsLineDivder, $asteriskLineDivider, $oldHeader);
+	$dividers = array($equalsLineDivider, $asteriskLineDivider, $oldHeader);
 	$contentsArray = array_diff($contentsArray, $dividers);
 	// print_r($contentsArray);
 // Separate first 3 elements (to get rid of unnecessary top content) into their own array for later use
@@ -78,14 +78,27 @@
 
 
 // Echo the Header information
+	echo $asteriskLineDivider."**************************".PHP_EOL;
 	echo "$reportHeaderArray[2]	|	$reportHeaderArray[1]	|	$reportHeaderArray[0]".PHP_EOL;
-	echo "Sales Units 	|	Employee Name 	|	Employee Number".PHP_EOL;
+	echo $equalsLineDivider."==========================".PHP_EOL;
+	echo "Sales Units 	|	Employee Name 		|	Employee Number".PHP_EOL;
+	echo "_____________________________________________________________________________".PHP_EOL;
 // Create a function that foreach loops through the new global array, and: 
 // echo "$Array[$key]['Sales Units'] 		|	$Array[$key]['First Name'] $Array[$key]['Last Name'] 		|	$Array[$key]['Employee Number']";
 	foreach($sortedBySalesArray as $employee){
-		echo $employee['Unit Sales']."	|	".$employee['First Name']." ".$employee['Last Name']."	|	".$employee['Employee Number'].PHP_EOL;
-		// $compactedEmployee = implode('	|	', $employee);
-		// $newArray[] = $compactedEmployee;
+		// echo "\t".$employee['Unit Sales']."\t\t".$employee['First Name']." ".$employee['Last Name']."\t\t\t".$employee['Employee Number'].PHP_EOL;
+		$sales = $employee['Unit Sales'];
+		$name = $employee['First Name']." ".$employee['Last Name'];
+		$employeeNum = $employee['Employee Number'];
+		
+		// One formatting option:
+		// printf("%' 8d%' 32s%' 25u\n", $sales, $name, $employeeNum);
+
+		// Nicer formatting option:
+		 $format = str_pad($sales, 15, " ", STR_PAD_BOTH);
+		 $format .= str_pad($name, 35, " ", STR_PAD_BOTH);
+		 $format .= str_pad($employeeNum, 25, " ", STR_PAD_BOTH).PHP_EOL;
+		 echo $format;
 	}
 
 

@@ -1,0 +1,11 @@
+
+2015-03-18 12:49:47 [Information] This is an informational message.
+2015-03-18 12:49:47 [WHOAnelly!] An error has occurred.
+2015-03-18 12:49:52 [Information] This is an informational message.
+2015-03-18 12:49:52 [WHOAnelly!] An error has occurred.
+2015-03-18 13:12:21 [Information] This is an informational message.
+2015-03-18 13:12:21 [WHOAnelly!] An error has occurred.
+2015-03-18 15:12:56 [Information] This is an informational message.
+2015-03-18 15:12:56 [WHOAnelly!] An error has occurred.
+2015-03-18 15:20:04 [INFO] This is an informational message.
+2015-03-18 15:20:04 [ERROR] An error has occurred.

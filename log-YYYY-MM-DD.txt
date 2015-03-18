@@ -1,0 +1,28 @@
+2015-03-18 18:54:43 [INFO] This is an info message.
+2015-03-18 18:54:43 [INFO] This is an info message.
+2015-03-18 18:54:43 [INFO] This is an info message.
+2015-03-18 18:54:44 [INFO] This is an info message.
+2015-03-18 18:54:44 [INFO] This is an info message.
+2015-03-18 12:00:39 [INFO] This is an info message.
+2015-03-18 12:00:56 [INFO] This is an info message.
+2015-03-18 12:00:56 [ERROR] This is an info message.
+2015-03-18 12:01:40 [INFO] This is an info message.
+2015-03-18 12:01:40 [ERROR] This is an info message.
+2015-03-18 12:02:36 [INFO] This is an info message.
+2015-03-18 12:02:36 [ERROR] This is an info message.
+2015-03-18 12:05:21 [INFO] This is an info message.
+2015-03-18 12:05:21 [ERROR] This is an info message.
+2015-03-18 12:05:22 [INFO] This is an info message.
+2015-03-18 12:05:22 [ERROR] This is an info message.
+2015-03-18 12:10:29 [INFO] This is an info message.
+2015-03-18 12:10:29 [ERROR] This is an info message.
+2015-03-18 12:12:42 [Information] This is an informational message.
+2015-03-18 12:12:42 [WHOAnelly!] An error has occurred
+2015-03-18 12:12:44 [Information] This is an informational message.
+2015-03-18 12:12:44 [WHOAnelly!] An error has occurred
+2015-03-18 12:13:16 [Information] This is an informational message.
+2015-03-18 12:13:16 [WHOAnelly!] An error has occurred.
+2015*03*18 12^27^46 [Information] This is an informational message.
+2015*03*18 12^27^46 [WHOAnelly!] An error has occurred.
+2015-03-18 12:28:03 [Information] This is an informational message.
+2015-03-18 12:28:03 [WHOAnelly!] An error has occurred.

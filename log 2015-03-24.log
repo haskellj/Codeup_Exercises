@@ -1,0 +1,5 @@
+
+2015-03-24 14:34:47 [INFO] This is a test of the logInfo function
+2015-03-24 14:34:47 [ERROR] This is a test of the logError function
+2015-03-24 14:50:36 [INFO] This is a test of the logInfo function
+2015-03-24 14:50:36 [ERROR] This is a test of the logError function

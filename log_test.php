@@ -17,5 +17,9 @@
 	$newEntry->logInfo('This is a test of the logInfo() function along with the __construct() function');
 	$newEntry->logError('This is a test of the logError() function along with the __construct() function');
 	$newEntry->logInfo("Don't worry, the __destruct() function closed the file for us");
+	// Check if default $prefix works if not parameter is passed for a new object
+	$anotherEntry = new Log();
+	$anotherEntry->logInfo("Did not passing a parameter default to a 'log' prefix on the filename?");
+
 ?>
 

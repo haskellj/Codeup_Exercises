@@ -6,3 +6,15 @@
 2015-03-25 10:43:35 [INFO] This is a test of the logInfo() function along with the __construct() function
 2015-03-25 10:43:35 [ERROR] This is a test of the logError() function along with the __construct() function
 2015-03-25 10:43:35 [INFO] Don't worry, the __destruc() function closed the file for us
+2015-03-25 11:22:00 [INFO] This is a test of the logInfo() function along with the __construct() function
+2015-03-25 11:22:00 [ERROR] This is a test of the logError() function along with the __construct() function
+2015-03-25 11:22:00 [INFO] Don't worry, the __destruct() function closed the file for us
+2015-03-25 11:24:36 [INFO] This is a test of the logInfo() function along with the __construct() function
+2015-03-25 11:24:36 [ERROR] This is a test of the logError() function along with the __construct() function
+2015-03-25 11:24:36 [INFO] Don't worry, the __destruct() function closed the file for us
+2015-03-25 11:27:50 [INFO] This is a test of the logInfo() function along with the __construct() function
+2015-03-25 11:27:50 [ERROR] This is a test of the logError() function along with the __construct() function
+2015-03-25 11:27:50 [INFO] Don't worry, the __destruct() function closed the file for us
+2015-03-25 11:30:07 [INFO] This is a test of the logInfo() function along with the __construct() function
+2015-03-25 11:30:07 [ERROR] This is a test of the logError() function along with the __construct() function
+2015-03-25 11:30:07 [INFO] Don't worry, the __destruct() function closed the file for us

@@ -1,3 +1,4 @@
 
 2015-03-25 10:36:46 [INFO] This is a test of the logInfo function
 2015-03-25 10:36:46 [ERROR] This is a test of the logError function
+2015-03-25 11:30:07 [INFO] Did not passing a parameter default to a 'log' prefix on the filename?

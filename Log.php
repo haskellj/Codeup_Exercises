@@ -4,15 +4,13 @@
 		public $filename; 
 		public $handle;
 
-		public function __construct($prefix)
+		// This function runs automatically whenever the class is instantiated
+		public function __construct($prefix='log')
 		{
 			// Set timezone and date format
 		    date_default_timezone_set('America/Chicago');
 			$date = date('Y-m-d');
-		    
-			if(!isset($prefix)){
-				$prefix = 'log';
-			}
+
 			$this->filename = "{$prefix}-{$date}.log";
 			$this->handle = fopen($this->filename, 'a+');
 		}
@@ -40,6 +38,7 @@
 			$this->logMessage("ERROR", $message);
 		}
 
+		// This function runs automatically whenever the class is instantiated
 		public function __destruct()
 		{
 			fclose($this->handle);

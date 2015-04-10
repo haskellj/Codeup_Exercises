@@ -11,7 +11,7 @@
 
 		public function perimeter()
 		{
-			return 4 * ($this->width);
+			return 4 * ($this->getWidth());
 		}
 
 	}
